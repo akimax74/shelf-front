@@ -102,7 +102,7 @@ class _AddBookPageState extends State<AddBookPage> {
     final response = await http.get(Uri.parse(imageUrl));
     print(imageUrl);
     if (response.statusCode != 200) {
-      imageUrl = 'http://shelf-api.akimax74.net/download/nopicture.jpg/';
+      imageUrl = 'https://shelf-api.akimax74.net/download/nopicture.jpg/';
     }
 
     final bookData = {
@@ -117,7 +117,7 @@ class _AddBookPageState extends State<AddBookPage> {
 
     // 本を追加するためのリクエストを送信
     final addResponse = await http.post(
-      Uri.parse('http://shelf-api.akimax74.net/api/v2/books/'),
+      Uri.parse('https://shelf-api.akimax74.net/api/v2/books/'),
       headers: {
         'Authorization': 'Token $token',
         'Content-Type': 'application/json',

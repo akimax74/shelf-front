@@ -50,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
     final String password = _passwordController.text;
 
     final response = await http.post(
-      Uri.parse('http://shelf-api.akimax74.net/api-token-auth/'),
+      Uri.parse('https://shelf-api.akimax74.net/api-token-auth/'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },

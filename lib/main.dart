@@ -103,7 +103,7 @@ class _ShelfListState extends State<ShelfList> {
 
   Future<void> _loadUserdata() async {
     final response = await http.get(
-      Uri.parse('http://shelf-api.akimax74.net/api/v1/accounts/$_uuid/'),
+      Uri.parse('https://shelf-api.akimax74.net/api/v1/accounts/$_uuid/'),
       headers: {
         'Authorization': 'Token $_token',
         'Content-Type': 'application/json',
@@ -130,7 +130,7 @@ class _ShelfListState extends State<ShelfList> {
 
     try {
       final response = await http.get(
-        Uri.parse('http://shelf-api.akimax74.net/api/v2/books/user/$_uuid/'),
+        Uri.parse('https://shelf-api.akimax74.net/api/v2/books/user/$_uuid/'),
         headers: {
           'Authorization': 'Token $_token',
           'Content-Type': 'application/json',
@@ -165,7 +165,7 @@ class _ShelfListState extends State<ShelfList> {
     print('削除処理を開始します: bookId = $uuid');
     try {
       final response = await http.delete(
-        Uri.parse('http://shelf-api.akimax74.net/api/v2/books/$uuid/'),
+        Uri.parse('https://shelf-api.akimax74.net/api/v2/books/$uuid/'),
         headers: {
           'Authorization': 'Token $_token',
           'Content-Type': 'application/json',

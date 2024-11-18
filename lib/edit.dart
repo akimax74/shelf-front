@@ -20,6 +20,8 @@ class _EditPageState extends State<EditPage> {
   bool _isLoading = false;
   bool _isNSFW = false;
 
+  
+
   @override
   void initState() {
     super.initState();
@@ -58,12 +60,6 @@ class _EditPageState extends State<EditPage> {
       return;
     }
 
-    final response = await http.get(Uri.parse(imageUrl));
-    print(imageUrl);
-    if (response.statusCode != 200) {
-      imageUrl = 'http://shelf-api.akimax74.net/download/nopicture.jpg/';
-    }
-
     final bookData = {
       'book_title': _bookTitleController.text,
       'ISBN': _bookISBNController.text,
@@ -76,7 +72,7 @@ class _EditPageState extends State<EditPage> {
 
     try {
       final updateResponse = await http.put(
-        Uri.parse('http://shelf-api.akimax74.net/api/v2/books/${widget.book['uuid']}/'),
+        Uri.parse('http://shelfapi.akimax74.net/api/v2/books/${widget.book['uuid']}/'),
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Token $token',

@@ -19,6 +19,8 @@ class _AddBookPageState extends State<AddBookPage> {
   bool _isLoading = false;
   bool _isNSFW = false;
 
+  
+
   Future<void> _serchISBN(String isbn) async {
     setState(() {
       _isLoading = true;
@@ -98,13 +100,6 @@ class _AddBookPageState extends State<AddBookPage> {
       return;
     }
 
-    // 画像URLが有効かどうかを確認
-    final response = await http.get(Uri.parse(imageUrl));
-    print(imageUrl);
-    if (response.statusCode != 200) {
-      imageUrl = 'http://shelf-api.akimax74.net/download/nopicture.jpg/';
-    }
-
     final bookData = {
       'book_title': _bookTitleController.text,
       'ISBN': _bookISBNController.text,
@@ -117,7 +112,7 @@ class _AddBookPageState extends State<AddBookPage> {
 
     // 本を追加するためのリクエストを送信
     final addResponse = await http.post(
-      Uri.parse('http://shelf-api.akimax74.net/api/v2/books/'),
+      Uri.parse('http://shelfapi.akimax74.net/api/v2/books/'),
       headers: {
         'Authorization': 'Token $token',
         'Content-Type': 'application/json',

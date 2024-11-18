@@ -40,6 +40,8 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController _passwordController = TextEditingController();
   final FlutterSecureStorage _storage = FlutterSecureStorage();
 
+
+
   Future<void> _saveCredentials(String token, String uuid) async {
     await _storage.write(key: 'token', value: token);
     await _storage.write(key: 'uuid', value: uuid);
@@ -50,7 +52,7 @@ class _LoginPageState extends State<LoginPage> {
     final String password = _passwordController.text;
 
     final response = await http.post(
-      Uri.parse('http://shelf-api.akimax74.net/api-token-auth/'),
+      Uri.parse('http://shelfapi.akimax74.net/api-token-auth/'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },

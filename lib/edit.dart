@@ -61,7 +61,7 @@ class _EditPageState extends State<EditPage> {
     final response = await http.get(Uri.parse(imageUrl));
     print(imageUrl);
     if (response.statusCode != 200) {
-      imageUrl = 'https://shelf-api.akimax74.net/download/nopicture.jpg/';
+      imageUrl = 'http://shelf-api.akimax74.net/download/nopicture.jpg/';
     }
 
     final bookData = {
@@ -76,7 +76,7 @@ class _EditPageState extends State<EditPage> {
 
     try {
       final updateResponse = await http.put(
-        Uri.parse('https://shelf-api.akimax74.net/api/v2/books/${widget.book['uuid']}/'),
+        Uri.parse('http://shelf-api.akimax74.net/api/v2/books/${widget.book['uuid']}/'),
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Token $token',

@@ -35,7 +35,7 @@ class _SignupPageState extends State<SignupPage> {
     });
 
     final response = await http.post(
-      Uri.parse('https://shelf-api.akimax74.net/api/v1/register/'),
+      Uri.parse('http://shelf-api.akimax74.net/api/v1/register/'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },

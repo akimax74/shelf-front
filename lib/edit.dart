@@ -76,7 +76,6 @@ class _EditPageState extends State<EditPage> {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Token $token',
-          'Access-Control-Allow-Origin': '*'
         },
         body: json.encode(bookData),
       );

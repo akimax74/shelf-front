@@ -109,7 +109,6 @@ class _ShelfListState extends State<ShelfList> {
       headers: {
         'Authorization': 'Token $_token',
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
       },
     );
 
@@ -137,7 +136,6 @@ class _ShelfListState extends State<ShelfList> {
         headers: {
           'Authorization': 'Token $_token',
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*'
         },
       );
 

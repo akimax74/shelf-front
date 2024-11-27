@@ -59,7 +59,7 @@ class _AddBookPageState extends State<AddBookPage> {
           });
 
           // 画像URLを取得
-          final imageUrl = 'https://ndlsearch.ndl.go.jp/thumbnail/$isbn.jpg';
+          final imageUrl = 'https://shelfapi.akimax74.net/download/$isbn.jpg';
 
           // 画像URLをbookDataに追加
           await _addBook(imageUrl);

@@ -87086,7 +87086,7 @@ j=J.at(J.at(k,"summary"),"title")
 i=J.at(J.at(k,"summary"),"author")
 d.a=""
 try{if(J.at(J.at(J.at(k,"onix"),"CollateralDetail"),"TextContent")!=null&&J.j8(J.at(J.at(J.at(k,"onix"),"CollateralDetail"),"TextContent")))d.a=J.at(J.at(J.at(J.at(J.at(k,"onix"),"CollateralDetail"),"TextContent"),0),"Text")}catch(b){d.a=""}n.ad(new A.amH(d,n,j,i,k))
-h="https://ndlsearch.ndl.go.jp/thumbnail/"+a+".jpg"
+h="https://shelfapi.akimax74.net/download/"+a+".jpg"
 s=13
 return A.F(n.mP(h),$async$pg)
 case 13:s=11

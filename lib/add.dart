@@ -112,7 +112,7 @@ class _AddBookPageState extends State<AddBookPage> {
 
     // 本を追加するためのリクエストを送信
     final addResponse = await http.post(
-      Uri.parse('http://shelfapi.akimax74.net/api/v2/books/'),
+      Uri.parse('https://shelfapi.akimax74.net/api/v2/books/'),
       headers: {
         'Authorization': 'Token $token',
         'Content-Type': 'application/json',

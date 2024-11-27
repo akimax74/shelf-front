@@ -72,7 +72,7 @@ class _EditPageState extends State<EditPage> {
 
     try {
       final updateResponse = await http.put(
-        Uri.parse('http://shelfapi.akimax74.net/api/v2/books/${widget.book['uuid']}/'),
+        Uri.parse('https://shelfapi.akimax74.net/api/v2/books/${widget.book['uuid']}/'),
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Token $token',

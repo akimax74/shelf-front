@@ -55,6 +55,7 @@ class _LoginPageState extends State<LoginPage> {
       Uri.parse('https://shelfapi.akimax74.net/api-token-auth/'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
+        'Access-Control-Allow-Origin': '*'
       },
       body: jsonEncode(<String, String>{
         'username': email,

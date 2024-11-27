@@ -87136,7 +87136,7 @@ s=1
 break}l=t.N
 k=A.av(["book_title",p.d.a.a,"ISBN",p.f.a.a,"book_author",p.e.a.a,"book_publisher",p.r.a.a,"book_NSFW",p.x,"book_owner",m,"book_image",a],l,t.K)
 j=A.dU(u.R)
-l=A.av(["Authorization","Token "+A.j(n),"Content-Type","application/json"],l,l)
+l=A.av(["Authorization","Token "+A.j(n),"Content-Type","application/json","Access-Control-Allow-Origin","*"],l,l)
 s=5
 return A.F(A.aAW(j,B.bs.yR(k,null),l),$async$mP)
 case 5:l=c.b
@@ -87261,7 +87261,7 @@ break}f=t.N
 k=A.av(["book_title",m.d.a.a,"ISBN",m.f.a.a,"book_author",m.e.a.a,"book_publisher",m.r.a.a,"book_NSFW",m.x,"book_owner",g,"book_image",a],f,t.K)
 p=6
 e=A.dU(u.R+A.j(J.at(m.a.c,"uuid"))+"/")
-f=A.av(["Content-Type","application/json","Authorization","Token "+A.j(l)],f,f)
+f=A.av(["Content-Type","application/json","Authorization","Token "+A.j(l),"Access-Control-Allow-Origin","*"],f,f)
 s=9
 return A.F(A.aXJ(e,B.bs.m1(k),f),$async$pk)
 case 9:j=a1
@@ -87318,7 +87318,7 @@ $0(){this.a.x=this.b},
 $S:0}
 A.apa.prototype={
 $0(){var s=this.a
-s.pk("https://ndlsearch.ndl.go.jp/thumbnail/"+s.f.a.a+".jpg")},
+s.pk("https://shelfapi.akimax74.net/download/"+s.f.a.a+".jpg")},
 $S:0}
 A.t1.prototype={
 K(a){var s=null
@@ -87343,7 +87343,7 @@ while(true)switch(s){case 0:m=q.d.a.a
 l=q.e.a.a
 k=A.dU("https://shelfapi.akimax74.net/api-token-auth/")
 j=t.N
-i=A.av(["Content-Type","application/json; charset=UTF-8"],j,j)
+i=A.av(["Content-Type","application/json; charset=UTF-8","Access-Control-Allow-Origin","*"],j,j)
 s=2
 return A.F(A.aAW(k,B.bs.yR(A.av(["username",m,"password",l],j,j),null),i),$async$rI)
 case 2:h=b
@@ -87421,7 +87421,7 @@ wI(){var s=0,r=A.J(t.H),q=this,p,o
 var $async$wI=A.K(function(a,b){if(a===1)return A.G(b,r)
 while(true)switch(s){case 0:p=t.N
 s=2
-return A.F(A.aAL(A.dU("https://shelfapi.akimax74.net/api/v1/accounts/"+A.j(q.as)+"/"),A.av(["Authorization","Token "+A.j(q.Q),"Content-Type","application/json"],p,p)),$async$wI)
+return A.F(A.aAL(A.dU("https://shelfapi.akimax74.net/api/v1/accounts/"+A.j(q.as)+"/"),A.av(["Authorization","Token "+A.j(q.Q),"Content-Type","application/json","Access-Control-Allow-Origin","*"],p,p)),$async$wI)
 case 2:o=b
 if(o.b===200)q.ad(new A.atD(q,B.bs.Fx(0,A.aIb(A.aHh(o.e).c.a.h(0,"charset")).ei(0,o.w),null)))
 else{p=q.c.ae(t.W)
@@ -87434,7 +87434,7 @@ s=q}while(true)switch(s){case 0:n.ad(new A.atx(n))
 q=3
 j=t.N
 s=6
-return A.F(A.aAL(A.dU("https://shelfapi.akimax74.net/api/v2/books/user/"+A.j(n.as)+"/"),A.av(["Authorization","Token "+A.j(n.Q),"Content-Type","application/json"],j,j)),$async$mV)
+return A.F(A.aAL(A.dU("https://shelfapi.akimax74.net/api/v2/books/user/"+A.j(n.as)+"/"),A.av(["Authorization","Token "+A.j(n.Q),"Content-Type","application/json","Access-Control-Allow-Origin","*"],j,j)),$async$mV)
 case 6:m=b
 if(m.b===200){l=B.bs.ei(0,B.a2.ei(0,m.w))
 n.ad(new A.aty(n,l))}o.push(5)
@@ -87464,7 +87464,7 @@ s=q}while(true)switch(s){case 0:A.eu("\u524a\u9664\u51e6\u7406\u3092\u958b\u59cb
 q=3
 l=t.N
 s=6
-return A.F(A.aIR(A.dU(u.R+a+"/"),A.av(["Authorization","Token "+A.j(o.Q),"Content-Type","application/json"],l,l)),$async$oT)
+return A.F(A.aIR(A.dU(u.R+a+"/"),A.av(["Authorization","Token "+A.j(o.Q),"Content-Type","application/json","Access-Control-Allow-Origin","*"],l,l)),$async$oT)
 case 6:n=c
 A.eu("HTTP\u30b9\u30c6\u30fc\u30bf\u30b9\u30b3\u30fc\u30c9: "+n.b)
 s=n.b===204?7:9
@@ -87709,7 +87709,7 @@ A.EY.prototype={
 xt(){var s=0,r=A.J(t.H),q=this,p,o,n
 var $async$xt=A.K(function(a,b){if(a===1)return A.G(b,r)
 while(true)switch(s){case 0:q.ad(new A.au2(q))
-p=A.dU("https://shelf-api.akimax74.net/api/v1/register/")
+p=A.dU("https://shelfapi.akimax74.net/api/v1/register/")
 o=t.N
 n=A.av(["Content-Type","application/json; charset=UTF-8"],o,o)
 s=2

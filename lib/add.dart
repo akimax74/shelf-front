@@ -116,6 +116,7 @@ class _AddBookPageState extends State<AddBookPage> {
       headers: {
         'Authorization': 'Token $token',
         'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
       },
       body: jsonEncode(bookData),
     );

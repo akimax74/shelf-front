@@ -76,6 +76,7 @@ class _EditPageState extends State<EditPage> {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Token $token',
+          'Access-Control-Allow-Origin': '*'
         },
         body: json.encode(bookData),
       );
@@ -149,7 +150,7 @@ class _EditPageState extends State<EditPage> {
                 : ElevatedButton(
                     onPressed: () {
                       final isbn = _bookISBNController.text;
-                      _updateBook('https://ndlsearch.ndl.go.jp/thumbnail/$isbn.jpg'); // 画像URLを指定
+                      _updateBook('https://shelfapi.akimax74.net/download/$isbn.jpg'); // 画像URLを指定
                     },
                     child: Text('Update Book'),
                   ),

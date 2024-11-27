@@ -87343,7 +87343,7 @@ while(true)switch(s){case 0:m=q.d.a.a
 l=q.e.a.a
 k=A.dU("https://shelfapi.akimax74.net/api-token-auth/")
 j=t.N
-i=A.av(["Content-Type","application/json; charset=UTF-8","Access-Control-Allow-Origin","*"],j,j)
+i=A.av(["Content-Type","application/json; charset=UTF-8"],j,j)
 s=2
 return A.F(A.aAW(k,B.bs.yR(A.av(["username",m,"password",l],j,j),null),i),$async$rI)
 case 2:h=b

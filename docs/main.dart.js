@@ -87464,7 +87464,7 @@ s=q}while(true)switch(s){case 0:A.eu("\u524a\u9664\u51e6\u7406\u3092\u958b\u59cb
 q=3
 l=t.N
 s=6
-return A.F(A.aIR(A.dU(u.R+a+"/"),A.av(["Authorization","Token "+A.j(o.Q),"Content-Type","application/json","Access-Control-Allow-Origin","*"],l,l)),$async$oT)
+return A.F(A.aIR(A.dU(u.R+a+"/"),A.av(["Authorization","Token "+A.j(o.Q),"Content-Type","application/json"],l,l)),$async$oT)
 case 6:n=c
 A.eu("HTTP\u30b9\u30c6\u30fc\u30bf\u30b9\u30b3\u30fc\u30c9: "+n.b)
 s=n.b===204?7:9
